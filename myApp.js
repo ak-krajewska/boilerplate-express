@@ -7,9 +7,7 @@ app.use("/public", express.static(__dirname + "/public"));
 
 //Challenge: Implement a Root-Level Request Logger Middleware
 app.use("/", function (req, res, next) {
-  console.log(req.method + " " + req.path + " - " + req.ip
-    //method path - ip.
-    )
+  console.log(req.method + " " + req.path + " - " + req.ip)
   next()
 })
 
