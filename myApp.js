@@ -26,6 +26,14 @@ app.get('/now', function (req, res, next) {
   });
 });
 
+//Get Route Parameter Input from the Client
+app.get('/:word/echo', function(req, res){
+  //send a json object with the word
+  res.send({
+    echo: req.params.word
+  });
+});
+
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/views/index.html");
   });
