@@ -46,15 +46,11 @@ app.get("/json", function(req, res) {
     "message": response});
  });
 
-
-
-
-
-
-
-
-
-
+//Get Query Parameter Input from the Client
+app.get('/name', function(req, res) {
+  console.log(req.query.first + " " + req.query.last )
+  res.json({name: req.query.first + " " + req.query.last})
+})
 
 
 
