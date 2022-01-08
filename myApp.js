@@ -1,5 +1,12 @@
 var express = require('express');
 var app = express();
+var bodyParser = require("body-parser");
+
+//Use body-parser to Parse POST Requests
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
+
+
 
 
 console.log("Hello World");
@@ -51,6 +58,7 @@ app.get('/name', function(req, res) {
   console.log(req.query.first + " " + req.query.last )
   res.json({name: req.query.first + " " + req.query.last})
 })
+
 
 
 
