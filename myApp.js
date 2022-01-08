@@ -8,10 +8,9 @@ app.use(bodyParser.json());
 
 //Get Data from POST Requests
 app.post('/name', function (req, res) {
-  var firstName = req.body.first
-  var lastName = req.body.last
-  console.log(firstName + " " + lastName)
-  res.json({name: firstName + " " + lastName})
+  var fulllName = req.body.first + " " + req.body.last
+  console.log(fulllName)
+  res.json({name: fulllName})
 })
 
 
